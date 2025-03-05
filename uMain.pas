@@ -42,6 +42,8 @@ begin
     eTarget.Text := Thangul.Iga(eSource.Text);
   2:
     eTarget.Text := Thangul.Ro(eSource.Text);
+  3:
+    eTarget.Text := Thangul.Wa(eSource.Text);
   end;
 end;
 

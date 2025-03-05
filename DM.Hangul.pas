@@ -33,6 +33,10 @@ type
     /// 을/를
     /// </summary>
     class function Ul(const AText: string): string; static;
+    /// <summary>
+    /// 와/과
+    /// </summary>
+    class function Wa(const AText: string): string; static;
   end;
 
 implementation
@@ -106,6 +110,13 @@ end;
 class function Thangul.Ul(const AText: string): string;
 const
   JOSA: array[Boolean] of string = ('를', '을');
+begin
+  Result := AText + JOSA[HasJongung(AText)];
+end;
+
+class function Thangul.Wa(const AText: string): string;
+const
+  JOSA: array[Boolean] of string = ('와', '과');
 begin
   Result := AText + JOSA[HasJongung(AText)];
 end;
