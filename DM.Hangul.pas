@@ -24,7 +24,6 @@ uses
 
 type
   Thangul = record
-  strict private
     class function GetJongung(const AText: string): Integer; static;
   public
     /// <summary>
